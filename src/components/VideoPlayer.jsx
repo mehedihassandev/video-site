@@ -1,10 +1,12 @@
-export const VideoPlayer = () => {
+import PropTypes from 'prop-types';
+
+export const VideoPlayer = ({ link, title }) => {
   return (
     <iframe
       width="100%"
       className="aspect-video"
-      src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
-      title="Some video title"
+      src={link}
+      title={title}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -12,4 +14,8 @@ export const VideoPlayer = () => {
   )
 }
 
+VideoPlayer.propTypes = {
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+}
 export default VideoPlayer
