@@ -45,7 +45,7 @@ export const Video = () => {
   }
 
   return (
-    <section className="pt-6 pb-20">
+    <section className="pt-10 pb-10">
       <div className="mx-auto max-w-screen-2xl px-2 pb-20 min-h-[400px]">
         {content}
       </div>

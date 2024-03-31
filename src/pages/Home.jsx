@@ -9,7 +9,7 @@ export const Home = () => {
     <>
       <Tags />
       <Videos />
-      <Pagination />
+      {/* <Pagination /> */}
     </>
   )
 }
