@@ -1,8 +1,5 @@
-import { Pagination } from '../components/Pagination'
-import { Tags } from '../components/Tags'
-import { Videos } from '../components/Videos'
-
-
+import { Tags } from "../components/Tags";
+import { Videos } from "../components/Videos";
 
 export const Home = () => {
   return (
@@ -11,7 +8,7 @@ export const Home = () => {
       <Videos />
       {/* <Pagination /> */}
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

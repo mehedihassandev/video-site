@@ -4,14 +4,12 @@ import { useEffect } from "react";
 import { fetchTags } from "../store/redux/tags/tagsSlice";
 
 export const Tags = () => {
-  const { tags } = useSelector((state) => state.tags);
-
   const dispatch = useDispatch();
+  const { tags } = useSelector((state) => state.tags);
 
   useEffect(() => {
     dispatch(fetchTags());
   }, [dispatch]);
-
 
   return tags.lenghts > 0 ? (
     <section>
