@@ -1,52 +1,56 @@
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types';
 
-export const Video = () => {
+export const Video = ({ video = {} }) => {
+
+  const { id, title, author, avatar, date, duration, views, thumbnail } = video;
+
   return (
     <div
       className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]"
     >
       <div className="w-full flex flex-col">
         <div className="relative">
-          <Link to="/videos/1">
+          <Link to={`videos/${id}`}>
             <img
-              src="https://dummyimage.com/600x400/000/fff"
+              src={thumbnail}
               className="w-full h-auto"
-              alt="Some video title"
+              alt={title}
             />
           </Link>
 
           <p
             className="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py"
           >
-            12:10
+            {duration}
           </p>
         </div>
 
         <div className="flex flex-row mt-2 gap-2">
-          <Link to='/videos/1' className="shrink-0">
+          <Link to={`videos/${id}`} className="shrink-0">
             <img
-              src="https://avatars.dicebear.com/api/avataaars/mehedi.svg?mood[]=happy"
+              src={avatar}
               className="rounded-full h-6 w-6"
-              alt="Learn with Sumit"
+              alt={author}
             />
           </Link>
 
           <div className="flex flex-col">
-            <Link to='/videos/1'>
+            <Link to={`videos/${id}`}>
               <p
                 className="text-slate-900 text-sm font-semibold"
               >
-                Lorem ipsum dolor sit amet consectetur
+                {title}
               </p>
             </Link>
             <a
               className="text-gray-400 text-xs mt-2 hover:text-gray-600"
               href="#"
             >
-              Md Mehedi Hassan
+              {author}
             </a>
             <p className="text-gray-400 text-xs mt-1">
-              200 views . May 3, 2022
+              {views} views . {date}
             </p>
           </div>
         </div>
@@ -54,5 +58,18 @@ export const Video = () => {
     </div>
   )
 }
+
+Video.propTypes = {
+  video: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    avatar: PropTypes.string,
+    date: PropTypes.string,
+    duration: PropTypes.string,
+    views: PropTypes.number,
+    thumbnail: PropTypes.string,
+  }),
+};
 
 export default Video
