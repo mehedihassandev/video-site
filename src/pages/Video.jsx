@@ -4,7 +4,7 @@ import { RelatedVideoList } from "../components/RelatedVideoList";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { fetchVideo } from "../redux/video/videoSlice";
+import { fetchVideo } from "../store/redux/video/videoSlice";
 
 export const Video = () => {
   const dispatch = useDispatch();
