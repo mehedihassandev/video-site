@@ -1,9 +1,9 @@
-import { Footer } from './components/Footer';
-import { Navbar } from './components/Navbar';
-import { Home } from './pages/Home';
-import { Video } from './pages/Video';
+import { Footer } from "./components/Footer";
+import { Navbar } from "./components/Navbar";
+import { Home } from "./pages/Home";
+import { Video } from "./pages/Video";
 
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/videos/:videoId' element={<Video />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/videos/:videoId" element={<Video />} />
       </Routes>
 
       <Footer />

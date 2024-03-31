@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Video } from "./Video";
 import { useEffect } from "react";
-import { fetchVideos } from "../features/videos/videosSlice";
+import { fetchVideos } from "../store/redux/videos/videosSlice";
 
 export const Videos = () => {
   const dispatch = useDispatch();
@@ -10,9 +10,11 @@ export const Videos = () => {
     (state) => state.videos
   );
 
+  const { tags, search } = useSelector((state) => state.filter);
+
   useEffect(() => {
-    dispatch(fetchVideos());
-  }, [dispatch]);
+    dispatch(fetchVideos({ tags, search }));
+  }, [dispatch, search, tags]);
 
   function renderMessage(message) {
     return (
@@ -23,15 +25,15 @@ export const Videos = () => {
   }
 
   if (isLoading) {
-    return renderMessage('Loading...');
+    return renderMessage("Loading...");
   }
 
   if (isError) {
-    return renderMessage('Some error happened');
+    return renderMessage("Some error happened");
   }
 
   if (videos.length === 0) {
-    return renderMessage('No videos found');
+    return renderMessage("No videos found");
   }
 
   if (error) {

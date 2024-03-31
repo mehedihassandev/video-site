@@ -1,4 +1,4 @@
-import axios from "../../utils/axios";
+import axios from "../../../utils/axios";
 
 export const getRelatedVideos = async ({ tags, id }) => {
   const limit = 5;

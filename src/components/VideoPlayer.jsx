@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const VideoPlayer = ({ link, title }) => {
   return (
@@ -11,11 +11,11 @@ export const VideoPlayer = ({ link, title }) => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
-  )
-}
+  );
+};
 
 VideoPlayer.propTypes = {
   link: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-}
-export default VideoPlayer
+  title: PropTypes.string.isRequired,
+};
+export default VideoPlayer;
