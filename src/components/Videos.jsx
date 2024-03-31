@@ -39,7 +39,7 @@ export const Videos = () => {
   }
 
   return (
-    <section className="pt-6">
+    <section className="pt-10">
       <div className="grid grid-cols-12 gap-4 max-w-screen-2xl mx-auto px-5 lg:px-0 min-h-[300px]">
         {videos.map((video, index) => (
           <Video key={index} video={video} />
