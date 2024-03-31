@@ -1,13 +1,9 @@
-import { Navbar } from '../components/Navbar'
 import { VideoPlayer } from '../components/VideoPlayer'
 import { VideoDescription } from '../components/VideoDescription'
 import { RelatedVideoList } from '../components/RelatedVideoList'
-import { Footer } from '../components/Footer'
 
 export const Video = () => {
-  return (<>
-
-    <Navbar />
+  return (
 
     <section className="pt-6 pb-20">
       <div className="mx-auto max-w-screen-2xl px-2 pb-20 min-h-[400px]">
@@ -22,9 +18,6 @@ export const Video = () => {
         </div>
       </div>
     </section>
-
-    <Footer />
-  </>
   )
 }
 

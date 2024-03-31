@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Search } from "./Search"
 
 export const Navbar = () => {
@@ -6,13 +7,13 @@ export const Navbar = () => {
             <div
                 className="max-w-screen-2xl mx-auto px-5 lg:px-0 flex justify-between py-3"
             >
-                <a href="/">
+                <Link to='/'>
                     <img
                         className="h-10"
                         src="../../src/assets/logo.png"
                         alt="logo"
                     />
-                </a>
+                </Link>
                 <div
                     className="border border-slate-200 flex items-center bg-white h-10 px-5 rounded-lg text-sm ring-emerald-200"
                 >
