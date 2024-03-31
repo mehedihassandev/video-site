@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 export const Tag = ({ title }) => {
   return (
     <div
@@ -9,8 +10,8 @@ export const Tag = ({ title }) => {
   )
 }
 
-Tag.prototype = {
-  title: PropTypes.string,
+Tag.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default Tag

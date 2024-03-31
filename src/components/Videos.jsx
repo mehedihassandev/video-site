@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Video } from "./Video";
 import { useEffect } from "react";
-import { fetchVideos } from "../features/videos/videosSlice";
+import { fetchVideos } from "../redux/videos/videosSlice";
 
 export const Videos = () => {
   const dispatch = useDispatch();
