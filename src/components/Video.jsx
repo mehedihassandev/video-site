@@ -44,13 +44,13 @@ export const Video = ({ video = {} }) => {
 
 Video.propTypes = {
   video: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     title: PropTypes.string,
     author: PropTypes.string,
     avatar: PropTypes.string,
     date: PropTypes.string,
     duration: PropTypes.string,
-    views: PropTypes.number,
+    views: PropTypes.string,
     thumbnail: PropTypes.string,
   }),
 };
